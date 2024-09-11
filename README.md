@@ -5,7 +5,7 @@
 3. docker compose up -d dentro de la carpeta infra
 4. Se deberian de haber creado dos archivos .html en la carpeta static, si es asi eliminaros, si no se han creado algo
    ha fallado
-5. docker compose up -d dentro de la carpeta render
+5. docker compose up -d dentro de la carpeta infra
 6. tienes que crear un indice llamado ssi_v1 con un alias
    ssi, en localhost:5601 tienes el kibana y puedes ejecutar los siguientes comandos en la consola del kibana
    ```elasticsearch
