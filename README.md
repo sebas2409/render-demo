@@ -6,8 +6,38 @@
 4. Se deberian de haber creado dos archivos .html en la carpeta static, si es asi eliminaros, si no se han creado algo
    ha fallado
 5. docker compose up -d dentro de la carpeta render
-6. Puede que el elasticsearch se haya creado sin indices, asi que tienes que crear un indice llamado ssi_v1 con un alias
-   ssi, en localhost:5601 tienes el kibana
+6. tienes que crear un indice llamado ssi_v1 con un alias
+   ssi, en localhost:5601 tienes el kibana y puedes ejecutar los siguientes comandos en la consola del kibana
+   ```elasticsearch
+   ### VER TODOS LOS INDICES
+    GET /_cat/indices
+   
+   ### CREAR INDICE
+   PUT /ssi_v1
+   {
+      "settings": {
+         "number_of_shards": 1,
+         "number_of_replicas": 1
+      },
+      "mappings": {
+         "properties": {
+         }
+      }
+   }
+   
+   ### CREAR ALIAS
+   POST /_aliases
+   {
+      "actions": [
+         {
+            "add": {
+               "index": "ssi_v1",
+               "alias": "ssi"
+            }
+         }
+      ]
+   }
+   ```
 7. dentro del proyecto render hay un archivo request.http hay dos endpoints para crear ssi lo puedes hacer desde postman
    si no tienes IntelliJ Premium
 8. Levantar el proyecto de spring boot

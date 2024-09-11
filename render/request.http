@@ -1,3 +1,4 @@
+### CREAR ARTICULO
 POST localhost:3000/api/article/publish
 Content-Type: application/json
 
@@ -5,11 +6,11 @@ Content-Type: application/json
   "title": "Título de prueba"
 }
 
-###
+### OBTENER HTML DEL HEADER
 GET localhost:3000/api/esi/HEADER
 
 
-###
+### GUARDAR HEADER
 POST localhost:3000/api/esi/save
 Content-Type: application/json
 
@@ -19,7 +20,7 @@ Content-Type: application/json
   "name": "HEADER"
 }
 
-###
+### GUARDAR FOOTER
 POST localhost:3000/api/esi/save
 Content-Type: application/json
 
