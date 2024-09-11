@@ -1,0 +1,30 @@
+POST localhost:3000/api/article/publish
+Content-Type: application/json
+
+{
+  "title": "Título de prueba"
+}
+
+###
+GET localhost:3000/api/esi/HEADER
+
+
+###
+POST localhost:3000/api/esi/save
+Content-Type: application/json
+
+{
+  "fileName": "header.ftl",
+  "filePath": "/esi/header.ftl",
+  "name": "HEADER"
+}
+
+###
+POST localhost:3000/api/esi/save
+Content-Type: application/json
+
+{
+  "fileName": "footer.ftl",
+  "filePath": "/esi/footer.ftl",
+  "name": "FOOTER"
+}

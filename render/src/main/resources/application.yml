@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: render-demo
+
+
+server:
+  servlet:
+    context-path: /api
+  port: 3000
+
+
+path:
+  ftl: /home/sebas/IdeaProjects/render-demo/templates
+  static: /home/sebas/IdeaProjects/render-demo/static
+
+elastic:
+  uri: http://localhost:9200
