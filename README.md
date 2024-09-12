@@ -1,6 +1,6 @@
 # PASOS
 
-1. Cambiar paths en el docker compose y en al application.yml del proyecto render
+1. Cambiar paths en el /infra/compose.yml, en el /infra/default.conf y en al application.yml del proyecto render
 2. Si dentro de la carpeta infra no existe la carpeta es_data, crearla
 3. docker compose up -d dentro de la carpeta infra
 4. Se deberian de haber creado dos archivos .html en la carpeta static, si es asi eliminaros, si no se han creado algo
